@@ -13,4 +13,6 @@ public class UserModel {
     private Long id;
     private String fullName;
     private String password;
+
+    private String countryName;
 }

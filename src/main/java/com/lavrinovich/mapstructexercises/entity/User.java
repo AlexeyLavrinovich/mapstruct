@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Data
 @AllArgsConstructor
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 @Table(name = "user_entity")
+@DynamicUpdate
 public class User {
 
     @Id
@@ -21,5 +23,7 @@ public class User {
     private String name;
     private String surname;
     private String password;
+
+    private String countryName;
 
 }
