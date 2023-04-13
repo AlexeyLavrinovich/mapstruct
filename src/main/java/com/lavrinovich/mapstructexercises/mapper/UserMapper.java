@@ -11,6 +11,7 @@ public abstract class UserMapper {
 
     public static final UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
     protected String secret = "secret";
+    @Mapping(target = "fullName", expression = "java(user.getName() + ' ' + user.getSurname())")
     @Mapping(target = "password", expression = "java(user.getPassword() + secret)")
     public abstract UserModel mapToModel (User user);
     public abstract User mapToEntity (UserModel userModel);

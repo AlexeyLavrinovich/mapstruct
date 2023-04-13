@@ -5,10 +5,10 @@
 
     <changeSet id="1" author="Alexey Lavrinovich">
         <sql>
-            INSERT INTO user_entity (id, name, password) VALUES (1, 'Igor', '123');
-            INSERT INTO user_entity (id, name, password) VALUES (2, 'Lesha', '3456');
-            INSERT INTO user_entity (id, name, password) VALUES (3, 'Dima', '3123');
-            INSERT INTO user_entity (id, name, password) VALUES (4, 'Sveta', '0965965');
+            INSERT INTO user_entity (id, name, surname, password) VALUES (1, 'Igor', 'Belousov', '123');
+            INSERT INTO user_entity (id, name, surname, password) VALUES (2, 'Lesha', 'Tinyr', '3456');
+            INSERT INTO user_entity (id, name, surname, password) VALUES (3, 'Dima', 'Apolev', '3123');
+            INSERT INTO user_entity (id, name, surname, password) VALUES (4, 'Sveta', 'Belousova', '0965965');
         </sql>
     </changeSet>
 
