@@ -14,7 +14,8 @@ spring:
     open-in-view: false
     properties:
       hibernate:
-        show_sql: false
+        generate_statistics: true
+        show_sql: true
         format_sql: false
         ddl-auto: none
 
