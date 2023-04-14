@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class MapstructExercisesApplication implements org.springframework.boot.ApplicationRunner {
 
 	private UserRepo userRepo;
+	private UserMapper userMapper;
 
 	public static void main(String[] args) {
 		SpringApplication.run(MapstructExercisesApplication.class, args);
@@ -24,7 +25,7 @@ public class MapstructExercisesApplication implements org.springframework.boot.A
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		List<User> users = userRepo.findAll();
-		users.stream().map(UserMapper.INSTANCE::mapToModel).forEach(System.out::println);
+		users.stream().map(userMapper::mapToModel).forEach(System.out::println);
 		try(Scanner scanner = new Scanner(System.in)){
 			for (User u :
 					users) {
@@ -35,7 +36,7 @@ public class MapstructExercisesApplication implements org.springframework.boot.A
 		} catch(Exception e) {
 			throw new Exception(e.getMessage());
 		}
-		users.stream().map(UserMapper.INSTANCE::mapToModel).forEach(System.out::println);
+		users.stream().map(userMapper::mapToModel).forEach(System.out::println);
 
 	}
 }
